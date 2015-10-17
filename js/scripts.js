@@ -1,20 +1,22 @@
 $(document).ready(function() {
-  $("#ping-pong").submit(function(event) {
-    var number = prompt("Enter a number up to 100");
-    var int = 0;
+  $("#ping-pong").click(function(event) {
+    var number = prompt("Enter a number");
     var name = "";
-
-    for(int = 1; int <= number; int += 1) {
-      if(int % 3 === 0 && int % 5 === 0) {
+    alert(number);
+    for (var i = 0; i <= number; i ++ ) {
+      debugger;
+      if (i % 15 === 0 ) {
         name = "ping pong";
-      } else if(int % 3 === 0) {
+      } else if (i % 3 === 0) {
         name = "ping";
-      } else if(int % 5 === 0) {
+      } else if (i % 5 === 0) {
         name = "pong";
       } else {
-        name = int;
+        name = i;
       }
+
       $("#display").append("<li>" + name + "</li>");
+
     }
       event.preventDefault();
   });
