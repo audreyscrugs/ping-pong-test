@@ -1,11 +1,11 @@
 $(document).ready(function() {
   $("#ping-pong").click(function(event) {
     var number = prompt("Enter a number");
-    var name = "";
-    alert(number);
-    for (var i = 0; i <= number; i ++ ) {
-      debugger;
-      if (i % 15 === 0 ) {
+    var name;
+
+    for (var i = 1; i <= number; i ++ ) {
+
+      if (i % 15 === 0) {
         name = "ping pong";
       } else if (i % 3 === 0) {
         name = "ping";
